@@ -1,7 +1,7 @@
 public class Room {
     private int roomNr;
     private int countOfBeds;
-    private int pricePersonNight;
+    private int pricePerNight;
     private boolean hasBalcony;
     private boolean seaView;
 
@@ -9,11 +9,23 @@ public class Room {
         this.roomNr = roomNr;
         this.seaView = seaView;
         this.hasBalcony = hasBalcony;
-        this.pricePersonNight = pricePersonNight;
+        this.pricePerNight = pricePersonNight;
         this.countOfBeds = countOfBeds;
     }
 
     public int getRoomNr() {
         return roomNr;
+    }
+
+    public int getRoomPrice() {
+        return pricePerNight;
+    }
+
+    public String hasSeaView() {
+        if (this.seaView == true) {
+            return "ano";
+        } else {
+            return "ne";
+        }
     }
 }

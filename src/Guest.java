@@ -28,7 +28,7 @@ public class Guest {
     public String getDescription() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy", new Locale("CZ"));
         String birthDateCZ = birthDate.format(formatter);
-        return  name + " " + surname + " , datum narození: " + birthDateCZ;
+        return  name + " " + surname + " (" + birthDateCZ + ")";
     }
 
     //*vyřešeno getDescription
